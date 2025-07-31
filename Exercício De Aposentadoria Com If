@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int main()
+{
+    int idade,aposento,ap;
+    
+    printf("Digite sua idade:");
+    scanf("%d",&idade);
+    
+    printf("Qual a idade para se aposentar:");
+    scanf("%d",&ap);
+    
+    if (idade>=ap){
+        
+    aposento = idade-ap;
+    printf("Você pode se aposentar!!");
+    printf("\nJá pode se aposentar a %d",aposento);
+    }
+    else{
+    
+        aposento = ap-idade;
+        printf("Você não pode se aposentar..");
+        printf("\nAinda restam %d ano(os)",aposento);
+    }
+
+    return 0;
+}
