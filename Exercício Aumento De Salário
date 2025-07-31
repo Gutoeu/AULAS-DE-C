@@ -1,0 +1,43 @@
+#include <stdio.h>
+
+int main()
+{
+    float slr,porc,amt,slr2,inss,taxa,slr3,vale,faltas,dia,slr4,descnt;
+
+    printf("Digite seu salário:");
+    scanf("%f",&slr);
+
+    printf("Digite seu aumento:");
+    scanf("%f",&porc); 
+    
+    printf("Digite o valor da taxa de INSS:");
+    scanf("%f",&inss);
+    
+    printf("Qual o valor do seus Vale alimentação?");
+    scanf("%f",&vale);
+    
+    printf("Quantos dias não compareceu?");
+    scanf("%f",&faltas);
+    
+
+amt = (slr*porc)/100;
+slr2 = slr+amt;
+taxa = (inss*slr2)/100;
+slr3 = slr2-taxa;
+dia = slr3/30;
+descnt = dia*faltas;
+slr4 = slr3-descnt;
+
+printf("***********************************");
+printf("\nSalário atual:%2.f",slr);
+printf("\nTaxa de aumento:%2.f",porc);
+printf("\nValor do aumento:%2.f",amt);
+printf("\nSalário com aumento:%2.f",slr2);
+printf("\nValor do desconto do INSS:%2.f",taxa);
+printf("\nValor do salário liquido:%2.f",slr3);
+printf("\nCom desconto das faltas:%2.f",slr4);
+printf("\n***********************************");
+    
+
+return 0;
+}
