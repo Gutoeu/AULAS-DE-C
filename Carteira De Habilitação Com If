@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int main()
+{
+    int ano,idade,atual;
+    printf("Em que ano você está:");
+    scanf("%d",&atual);
+    printf("Digite o ano em que nasceu:");
+    scanf("%d",&ano);
+    
+    idade = atual - ano;
+    printf("Você tem %d anos",idade);
+    if(idade < 18){
+        printf("\nVocê não pode dirigir!");
+    }
+    else{
+        printf("\nVocê pode dirigir!");
+
+        
+    }
+    
+    
+    
+
+    return 0;
+}
+
