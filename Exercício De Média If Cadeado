@@ -1,0 +1,71 @@
+#include <stdio.h>
+
+int main()
+{
+    int n1,n2,n3,media;
+    
+    printf("Digite o primeiro número:");
+    scanf("%d",&n1);
+    
+    printf("Digite o segundo número:");
+    scanf("%d",&n2);
+    
+    printf("Digite o terceiro número:");
+    scanf("%d",&n3);
+    
+    media=(n1+n2+n3)/3;
+    
+    printf("Sua média é de: %d",media);
+    
+    
+    if(n1==media){
+        printf("\n%d é igual a sua média",n1);
+        if(n2>media){
+            printf("\n%d é maior q %d",n2,media);
+        }
+        else if(n2<media){
+            printf("\n%d é menor q %d",n2,media);
+        }
+        if(n3>media){
+            printf("\n%d é maior q %d",n3,media);
+        }
+        else if(n3<media){
+            printf("\n%d é menor q %d",n3,media);
+        }
+    }
+    else if(n2 == media){
+        printf("\n%d é igual a média",n2);
+        if(n1>media){
+            printf("\n%d é maior que a média",n1);
+        }
+        else if(n1<media){
+            printf("\n%d é menor que a média",n1);
+        }
+        if(n3>media){
+            printf("\n%d é maior que a média",n3);
+        }
+        else if(n3<media){
+            printf("\n%d é menor que a média",n3);
+        }
+    }else if(n3 == media){
+        printf("\n%d é igual a média",n3);
+        if(n1>media){
+            printf("\n%d é maior que a média",n1);
+        }
+        else if(n1<media){
+            printf("\n%d é menor que a média",n1);
+        }
+        if(n2>media){
+            printf("\n%d é maior que a média",n2);
+        }
+        else if(n2<media){
+            printf("\n%d é menor que a média",n2);
+        }
+    }
+    else{
+        printf("\nNenhum dos números é igual a média");
+    }
+
+    return 0;
+}
+
