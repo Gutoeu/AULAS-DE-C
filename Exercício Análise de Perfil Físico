@@ -1,0 +1,37 @@
+#include <stdio.h>
+
+int main()
+{
+    int idade,contagem,soma_idade=0,somador=1,cont_altura=0;
+    float peso,altura,condicao1,condicao2,condicao3,cont_porcentagem=0,cont_peso=0;
+    
+    for(contagem=0;contagem<4;contagem++){
+        printf("%dº\n",somador++);
+        printf("Digite seu peso:");
+        scanf("%f",&peso);
+        printf("Digite sua idade:");
+        scanf("%d",&idade);
+        printf("Digite sua altura:");
+        scanf("%f",&altura);
+        ("\n");
+        if(idade>50 && peso<60){
+            cont_porcentagem++;
+        }
+        if(altura<1.50){
+            soma_idade=(soma_idade+idade);
+            cont_altura++;
+        }
+        if(peso>100){
+            cont_peso++;
+        }
+    }
+    condicao1=(cont_porcentagem/4)*100;
+    condicao2=soma_idade/cont_altura;
+    condicao3=(cont_peso/4)*100;
+    
+    printf("\nPorcentagem das pessoas que tem mais de 50 anos e menos de 60kg: %.2f%%\n",condicao1);
+    printf("\nMédia das idades das pessoas com altura inferior a 1.50: %.2f\n",condicao2);
+    printf("\nPorcentagem das pessoas com mais de 100kg: %.2f%%\n",condicao3);
+
+    return 0;
+}
