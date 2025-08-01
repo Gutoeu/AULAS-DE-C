@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int main()
+{
+    int rep,frase;
+    printf("Número de repetições:");
+    scanf("%d",&rep);
+    
+    frase=0;
+    while (frase<rep){
+        printf("Não cruze a faixa amarela! %d/8\n",frase);
+        frase++;
+    }
+
+    return 0;
+}
