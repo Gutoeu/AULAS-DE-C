@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int main()
+{
+    int n1,n2,limite_maximo,limite_minimo;
+    
+    printf("Digite o limite máximo:");
+    scanf("%d",&n1);
+    
+    printf("Digite o limite mínimo:");
+    scanf("%d",&n2);
+    
+    printf("Maior para menor:\n");
+    
+    for(limite_maximo=n1;limite_maximo>=n2;limite_maximo--){
+        printf("%d ",limite_maximo);
+    }
+    printf("\n");
+    printf("\nManor para maior:\n");
+    for(limite_minimo=n2;limite_minimo<=n1;limite_minimo++){
+        printf("%d ",limite_minimo);
+    }
+
+    return 0;
+}
