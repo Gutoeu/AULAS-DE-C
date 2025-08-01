@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <string.h>
+
+int main()
+{
+    char nome[10],sobre[10];
+    
+    
+    printf("Digite o seu nome:\n");
+    fgets(nome,10,stdin);
+    fflush(stdin);
+    
+    printf("Digite seu sobrenome:\n");
+    fgets(sobre,10,stdin);
+    fflush(stdin);
+    
+    strcat(nome,sobre);
+    
+    printf("Seu nome completo é %s",nome);
+    
+    
+
+
+    return 0;
+}
