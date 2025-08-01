@@ -1,0 +1,38 @@
+#include <stdio.h>
+
+int main()
+{
+    float n1,n2;
+    int opcao;
+    
+    printf("Digite um número:");
+    scanf("%f",&n1);
+    
+    printf("Digite outro:");
+    scanf("%f",&n2);
+    
+    printf("************************");
+    printf("\n1-SOMA\n2-SUBTRAÇÃO\n3-MULTIPLICAÇÃO\n4-DIVISÃO");
+    printf("\n************************");
+    printf("\nEscolha uma opção:");
+    scanf("%d",&opcao);
+    
+    if((opcao<=0)&&(opcao>=5)){
+    printf("o valor nao funfa");
+    }
+    else{
+    if(opcao==1){
+        printf("A soma dos números %.2f e %.2f é igual a %.2f",n1,n2,n1+n2);
+        }
+        else if(opcao==2){
+        printf("A subtração dos números %.2f e %.2f é igual a %.2f",n1,n2,n1-n2);
+        }
+        else if(opcao==3){
+        printf("A multiplicação dos números %.2f e %.2f é igual a %.2f",n1,n2,n1*n2);
+        }
+        else if(opcao==4){
+            printf("A divisão dos números %.2f e %.2f é igual a %.2f",n1,n2,n1/n2);
+        }
+    }
+    return 0;
+}
