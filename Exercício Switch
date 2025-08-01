@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int main()
+{
+    int numeros;
+    
+    printf("Digite 1 ou 2: ");
+    scanf("%d",&numeros);
+    
+    switch (numeros){
+    
+    case 1:
+    printf("Você digitou o número *1*");
+    break;
+    
+    case 2:
+    printf("Você digitou o número *2*");
+    break;
+    
+    default:
+    printf("Valor incorreto");
+    break;
+}
+    return 0;
+}
