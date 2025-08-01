@@ -1,0 +1,136 @@
+#include <stdio.h>
+#include <string.h>
+
+int main()
+{
+    int cor,pagamento,dia,profissional;
+    float tamanho_tattoo,horario;
+    char imagem[10]; 
+    char nome_profissional[20];
+    char forma_pagamento[30];
+    
+    printf("****Formulário de agendamento****\n");
+    printf("\n--------------------------------------\n");
+    printf("Opções de tamanho: \n(1)5cm (2)10cm (3)15cm (4)+15cm\nDigite:");
+    scanf("%f",&tamanho_tattoo);
+    printf("\n--------------------------------------\n");
+
+    if(tamanho_tattoo>4 || tamanho_tattoo<1){
+        printf("Escolha inválida!!");
+        return 0;
+    }
+    else{
+        if (tamanho_tattoo == 1){
+            tamanho_tattoo = 5;
+        }
+        else if (tamanho_tattoo == 2){
+            tamanho_tattoo = 10;
+        }
+         else if (tamanho_tattoo == 3){
+            tamanho_tattoo = 15;
+        }
+         else if (tamanho_tattoo == 4){
+            tamanho_tattoo = 15;
+        }
+    }
+    printf("\nOpções de cores\n(1)Preto (2)Colorido\nDigite:");
+    scanf("%d",&cor);
+    if(cor<1 || cor>2){
+        printf("Escolha inválida");
+        return 0;
+    }
+    else{
+        if (cor == 1){
+        strcpy(imagem, "Preto");
+    }
+    else if (cor == 2){
+        strcpy(imagem, "Colorido");
+    }
+    }
+    printf("\n--------------------------------------\n");
+    printf("\nProfissionais disponiveis\n(1)Guilherme (2)Beatriz\nDigite:");
+    scanf("%d",&profissional);
+    printf("\n--------------------------------------\n");
+    
+    if(profissional == 1){
+        
+        printf("****Agenda do tatuador Guilherme****\nDias disponiveis: 1 ao 15\n");
+        printf("\nInforme o dia pretendido:");
+        scanf("%d",&dia);
+        if (dia <1 || dia >15){
+            printf("\n--------------------------------------\n");
+            printf("\nDia indisponivel na agenda deste tatuador");
+            return 0;
+        }
+        else{
+            if (profissional == 1){
+                strcpy(nome_profissional, "Guilherme");
+
+            }
+            else if (profissional == 2){
+                strcpy(nome_profissional, "Beatriz");
+            }   
+        }
+    }
+    else if (profissional == 2){
+        
+        printf("**Agenda da tatuadora Beatriz**\nDias disponiveis: 16 ao 30\n");
+        printf("\nInforme o dia pretendido:");
+        scanf("%d",&dia);
+        if (dia <16 || dia >30){
+            printf("\n--------------------------------------\n");
+            printf("\nDia indisponivel na agenda deste tatuador");
+            return 0;
+        }
+    }
+    else{
+        printf("Escolha inválida");
+        return 0;
+    }
+    printf("\n--------------------------------------\n");
+
+    if(dia<1 || dia >31){
+        printf("Escolha inválida");
+        return 0;
+    }
+    printf("****Horarios das 10hs até as 20hs****\n");
+    printf("\nInforme o horário desejado:");
+    scanf("%f",&horario);
+    if(horario < 10 || horario >20){
+        printf("Escolha inválida!!");
+        return 0;
+    }
+    printf("\n--------------------------------------\n");
+    printf("\nFormas de pagamento\n(1)PIX\n(2)CARTÃO DE DÉBITO\n(3)CARTÃO DE CRÉDITO\nDigite:");
+    scanf("%d",&pagamento);
+    if(pagamento<1 || pagamento>3){
+        printf("\n--------------------------------------\n");
+        printf("\nEscolha inválida");
+        return 0;
+        
+    }
+    else{
+        if (pagamento == 1){
+            strcpy(forma_pagamento, "PIX");
+        }
+        else if (pagamento == 2){
+            strcpy(forma_pagamento, "Cartão de Débito");
+        }
+        else if (pagamento == 3){
+            strcpy(forma_pagamento, "Cartão de Crédito");
+        }
+    }
+        printf("\n--------------------------------------\n");
+        printf("\nAgendamento concluido!!");
+        printf("\nTamanho: %.2fcm\n", tamanho_tattoo);
+        printf("Cor: %s\n", imagem);
+        printf("Profissional: %s\n", nome_profissional);
+        printf("Dia: %d\n", dia);
+        printf("Hora: %.2f HS\n" , horario);
+        printf("Forma de pagamento: %s\n", forma_pagamento);
+   
+
+
+
+    return 0;
+}
