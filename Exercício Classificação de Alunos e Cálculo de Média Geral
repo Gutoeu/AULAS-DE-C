@@ -1,0 +1,53 @@
+#include <stdio.h>
+
+int main()
+{
+    float nota1,nota2,media,media_geral;
+    int numero_alunos=0,contador=0,num=1,cont_reprovado=1,cont_aprovado=1,cont_recuperação=1;
+    
+    while(numero_alunos<6){
+        printf("\n=====================");
+        printf("\n%dºAluno:\n",num++);
+        printf("*Primeira nota:");
+        scanf("%f",&nota1);
+        printf("*Segunda nota:");
+        scanf("%f",&nota2);
+        
+        contador++;
+        
+        if(nota1 >= 0 && nota2 >= 0 && nota1 <= 10 && nota2 <= 10){
+            media = (nota1+nota2)/2;
+            media_geral = (media+media_geral)/2;
+            printf("\n*A média total:%.2f",media);
+            if (media < 5){
+                printf("\n*Reprovado!!\n");
+                cont_reprovado++;
+            }
+            else if (media <7 && media > 5){
+                printf("\n*Recuperação!!\n");
+                cont_recuperação++;
+            }
+            else if (media >7 && media <= 10){
+                printf("\n*Aprovado\n");
+                cont_aprovado++;
+            }
+
+        }
+        else{
+            printf("Valor inválido!!");
+            break;
+        }
+        
+        numero_alunos++;
+     
+
+    }
+    printf("\n===========Tabela===========");
+    printf("\nReprovados:%d\nRecuperação:%d\nAprovados:%d\n",cont_reprovado,cont_recuperação,cont_aprovado);
+    printf("Média geral:%.2f\n",media_geral);
+    
+    
+
+    return 0;
+}
+
