@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int main()
+{
+    int valor_hora_comum=10,valor_hora_excedente=20,horas_trabalhadas;
+    float salario1,excesso_horas,salario_final;
+    printf("Digite as hóras trabalhadas:");
+    scanf("%d",&horas_trabalhadas);
+    
+    salario1=valor_hora_comum*horas_trabalhadas;
+    
+    if(horas_trabalhadas>50){
+        excesso_horas=horas_trabalhadas-50;
+        salario_final=(excesso_horas*valor_hora_excedente)+salario1;
+        printf("\nO valor das horas trabalhadas sem o excesso é de %.2f",salario1);
+        printf("\nO excesso é de %.2f",excesso_horas*valor_hora_excedente);
+        printf("\nE o sálario final é de %.2f\n",salario_final);
+    }
+    else{
+        printf("Não houve excesso, o salário é de %.2f",salario1);
+        
+    }
+   
+
+
+    return 0;
+}
