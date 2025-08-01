@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int main()
+{
+    int v[5],i;
+    
+    for(i=0;i<5;i++){
+        printf("Digite um valor:");
+        scanf("%d",&v[i]);
+    }
+    for(i=0;i<5;i++){
+        printf("Seus valores são:%d\n",v[i]);
+    }
+
+    return 0;
+}
