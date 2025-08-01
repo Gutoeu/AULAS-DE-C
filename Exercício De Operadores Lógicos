@@ -1,0 +1,34 @@
+#include <stdio.h>
+
+int main()
+{
+    float n1,n2,n3;
+    printf("Digite o primeiro lado do tringulo:");
+    scanf("%f",&n1);
+    
+    printf("Digite o segundo lado do tringulo:");
+    scanf("%f",&n2);
+    
+    printf("Digite o terceiro lado do tringulo:");
+    scanf("%f",&n3);
+    
+    if((n3<=(n1+n2))&&(n1<=(n2+n3))&&(n2<=(n1+n3))){
+        printf("É um triangulo");
+        if((n1==n2)&&(n2==n3)){
+            printf("\nÉ um trinagulo equilátero");
+        }
+        else{
+            if((n1==n2)||(n2==n3)||(n3==n1)){
+            printf("\nÉ um triangulo isósceles");
+            }
+            else{
+            printf("\nÉ um triangulo escaleno");
+                
+            }
+        }
+    }else{
+        printf("Não é um triangulo");
+    }
+
+    return 0;
+}
