@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main()
+{
+    int numero,quantidade;
+    float porcentagem;
+    printf("Digite um número:");
+    scanf("%d",&numero);
+    
+    printf("Quantidade:");
+    scanf("%d",&quantidade);
+    porcentagem = (numero*quantidade)/100;
+    
+    printf("Pocentagem: %.2f",porcentagem);
+    return 0;
+}
+
