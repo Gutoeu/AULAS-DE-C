@@ -1,0 +1,56 @@
+#include <stdio.h>
+
+int main()
+{
+    int quantidade,i,aprov,recup,reprov;
+    float notA1,notA2, media;
+    printf("Digite a quantidade de alunos da Turma:");
+    scanf("%d",&quantidade);
+    
+    aprov = 0;
+    recup = 0;
+    reprov = 0;
+    
+    for(i = 1 ; i <= quantidade; i++){
+        do{
+        printf("\nAluno %d\n",i);
+        printf("Digite a primeira nota do aluno:");
+        scanf("%f",&notA1);
+        if(notA1 < 0 || notA1 > 10){
+            printf("Nota inválida!!\nDigite valores somente de 0 a 10..\n");
+        }
+        }while(notA1 < 0 || notA1 > 10);
+    
+        do{
+        printf("Digite a segunda nota do aluno:");
+        scanf("%f",&notA2);
+        if(notA2 < 0 || notA2 > 10){
+            printf("Nota inválida!!\nDigite valores somente de 0 a 10..\n");
+        }
+        }while(notA2 < 0 || notA2 > 10);
+        
+        
+        media = (notA1 + notA2)/2;
+
+        if (media >= 7){
+            printf("Aluno aprovado!\n");
+            aprov++;
+            
+        }
+        else if (media >= 5 && media <7){
+            printf("Aluno de Recuperação\n");
+            recup++;
+        }
+        else if (media < 5){
+            printf("Aluno Reprovado\n");
+            reprov++;
+            
+        }
+    }
+    printf("----------------RELATÓRIO------------------\n");
+    printf("1.Quantidade de Alunos Aprovados:%d\n",aprov);
+    printf("2.Quantidade de Alunos em Recuperação:%d\n",recup);
+    printf("3.Quantidade de Alunos Reprovados:%d\n",reprov);
+
+    return 0;
+}
